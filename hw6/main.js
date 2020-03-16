@@ -48,6 +48,6 @@ var vasya = new Cat('Василий');
 console.log(vasya.name);
 
 vasya.dailyNorm(250);
-vasya.feed();
+vasya.stroke().feed();
 
 vasya = null;
