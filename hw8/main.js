@@ -48,3 +48,17 @@ function isPalindrome(word) {
     }
 }
 console.log (isPalindrome ('Шалаш'));
+
+// задание 4
+
+function areAnagrams(word, wordAnagrams) {
+    var word = word.toLowerCase();
+    var wordAnagrams = word.split().sort().join('');
+
+    if (wordAnagrams == word) {
+        return true;
+    } else {
+        return false
+    }
+}
+console.log (areAnagrams ('кот' , 'окт'));
