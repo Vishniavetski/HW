@@ -7,7 +7,6 @@ function keyValye(arr) {
         newObj.name = el;
         return newObj;
     });
-
 }
 
 keyValye(arr);
@@ -25,4 +24,18 @@ function time(arr) {
 }
 time(arr);
 
+// задание 3
+
+var phrase = 'тут много гласных';
+function vowels(phrase) {
+    var word = ['а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'ю', 'я', 'э'];
+    var newPhrase = phrase.toLowerCase().split('')
+    return  newPhrase.reduce(function (a, b) {
+       return (word.includes(b)) ? a + 1 : a
+    }, 0)
+
+}
+vowels(phrase);
+
+// задание 4
 
