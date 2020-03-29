@@ -39,3 +39,22 @@ vowels(phrase);
 
 // задание 4
 
+countSentencesLetters(str);
+
+var str = 'Привет, студент! Студент... Как дела, студент?';
+
+function countSentencesLetters(str) {
+    var arr = str.split(/[.!?]/);
+    var rezult = '';
+
+    for (var i = 0; i < arr.length; i++) {
+        if(arr[i].length > 1 ) {
+
+            rezult += arr[i].trim() + ': Letters quantiti is: ' + arr[i].trim().split(/[,' ']/).join('').length + '\n';
+        }
+    };
+
+    return rezult;
+}
+
+countSentencesLetters(str);
