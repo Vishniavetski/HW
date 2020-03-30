@@ -29,17 +29,17 @@ var phrase = 'тут не очень много гласных';
 function vowels(phrase) {
     var word = ['а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'ю', 'я', 'э'],
         newPhrase = phrase.toLowerCase().split(''),
-        a = 0;
+        rezault = 0;
 
     newPhrase.forEach(function (el) {
         word.forEach(function (item) {
             if (el === item) {
-                a += 1;
+                rezault += 1;
             }
         });
     });
 
-    return a;
+    return rezault;
 
 }
 vowels(phrase);
