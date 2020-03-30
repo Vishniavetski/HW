@@ -43,7 +43,6 @@ function vowels(phrase) {
 }
 vowels(phrase);
 
-
 // задание 4
 
 countSentencesLetters(str);
