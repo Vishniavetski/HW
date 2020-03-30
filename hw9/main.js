@@ -40,9 +40,9 @@ function vowels(phrase) {
     });
 
     return rezault;
-
 }
 vowels(phrase);
+
 
 // задание 4
 
