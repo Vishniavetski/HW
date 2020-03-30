@@ -3,9 +3,7 @@ var arr = ['Вася' , 'Петя' , 'Вова'];
 
 function keyValye(arr) {
     return arr.map(function(el) {
-        var newObj = {};
-        newObj.name = el;
-        return newObj;
+        return {name : el};
     });
 }
 
@@ -17,22 +15,31 @@ var arr = ['00', '13', '24'];
 
 function time(arr) {
 
-    return arr.reduce(function (a, b, i) {
+    return arr.reduce(function (a, b) {
 
-        return (i === 0) ? "Текущае время: " + b : a + ' : ' + b;
-    }, '0');
+        return a + ' : ' + b;
+    }, 'Текущее время');
 }
 time(arr);
 
 // задание 3
 
-var phrase = 'тут много гласных';
+var phrase = 'тут не очень много гласных';
+
 function vowels(phrase) {
-    var word = ['а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'ю', 'я', 'э'];
-    var newPhrase = phrase.toLowerCase().split('')
-    return  newPhrase.reduce(function (a, b) {
-       return (word.includes(b)) ? a + 1 : a
-    }, 0)
+    var word = ['а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'ю', 'я', 'э'],
+        newPhrase = phrase.toLowerCase().split(''),
+        a = 0;
+
+    newPhrase.forEach(function (el) {
+        word.forEach(function (item) {
+            if (el === item) {
+                a += 1;
+            }
+        });
+    });
+
+    return a;
 
 }
 vowels(phrase);

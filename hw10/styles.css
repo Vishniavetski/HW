@@ -1,0 +1,20 @@
+table {
+	border-collapse: collapse;
+}
+
+th {
+	width: 250px;
+	height: 50px;
+}
+
+.add-row {
+	font-weight: bold;
+	text-align: center;
+
+}
+
+.add-row:hover {
+	background-color: aqua;
+	color: red;
+	cursor: pointer;
+}
