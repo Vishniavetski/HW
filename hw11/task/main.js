@@ -21,16 +21,20 @@ button.onclick = function() {
 
 localStorage.clear();
 
-secondTask.forEach(function(item, i) {
-    secondTask[i].addEventListener('click', function() {
-        event.preventDefault();
-        if (localStorage.getItem(secondTask[i].innerHTML) === null) {
-            var obj = {};
-            obj.path = (secondTask[i].getAttribute('href'));
-            localStorage.setItem(secondTask[i].innerHTML, JSON.stringify(obj));
-            alert('Ссылка сохранена');
-        } else {
-            alert(JSON.parse(localStorage.getItem(secondTask[i].innerHTML)).path);
-        }
-    });
+
+secondPar.addEventListener('click', function() {
+    event.preventDefault();
+    var target = event.target;
+
+    if (target.tagName !== 'A') return;
+
+    if (localStorage.getItem(target.textContent) === null) {
+        var obj = {};
+        obj.path = target.getAttribute('href');
+        localStorage.setItem(target.textContent, JSON.stringify(obj));
+        alert('Ссылка сохранена');
+    } else {
+        alert(JSON.parse(localStorage.getItem(target.textContent)).path);
+    }
 });
+
