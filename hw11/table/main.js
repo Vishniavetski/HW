@@ -51,6 +51,16 @@ button.addEventListener('click', function() {
             }
         }
     }
+    table.onclick = function () {
+        var td = table.querySelectorAll('td');
+
+        for (var k = 0; k < td.length; k++) {
+            td[k].classList.toggle('black');
+        }
+    };
 });
+
+
+
 
 
